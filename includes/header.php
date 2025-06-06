@@ -4,7 +4,7 @@
 
 <header class="bg-dark text-white sticky-top">
   <nav class="navbar navbar-expand-lg navbar-dark container px-3 px-lg-0">
-    <a class="navbar-brand fw-bold fs-4" href="index.php">
+    <a class="navbar-brand fw-bold fs-4" href="index.html">
       <i class="fas fa-coins me-2" style="color: #f0b90b;"></i>CryptoEdu
     </a>
 
@@ -16,14 +16,14 @@
     <div class="collapse navbar-collapse justify-content-lg-end" id="cryptoNavbar">
       <ul class="navbar-nav mt-3 mt-lg-0">
         <!-- Example Nav Items -->
-        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="beginner-guide.php">Beginner Guide</a></li>
-        <li class="nav-item"><a class="nav-link" href="wallet-types.php">Wallets</a></li>
-        <li class="nav-item"><a class="nav-link" href="security-tips.php">Security</a></li>
-        <li class="nav-item"><a class="nav-link" href="market-overview.php">Markets</a></li>
-        <li class="nav-item"><a class="nav-link" href="glossary.php">Glossary</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.php">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="beginner-guide.html">Beginner Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="wallet-types.html">Wallets</a></li>
+        <li class="nav-item"><a class="nav-link" href="security-tips.html">Security</a></li>
+        <li class="nav-item"><a class="nav-link" href="market-overview.html">Markets</a></li>
+        <li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
       </ul>
     </div>
   </nav>

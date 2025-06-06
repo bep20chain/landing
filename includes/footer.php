@@ -47,7 +47,7 @@
         <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">Quick Links</h4>
         <ul style="list-style: none; padding: 0; margin: 0;">
           <li style="margin-bottom: 0.8rem;">
-            <a href="beginner-guide.php" style="
+            <a href="beginner-guide.html" style="
               color: #ffffff;
               text-decoration: none;
               opacity: 0.8;
@@ -60,7 +60,7 @@
             </a>
           </li>
           <li style="margin-bottom: 0.8rem;">
-            <a href="wallet-types.php" style="
+            <a href="wallet-types.html" style="
               color: #ffffff;
               text-decoration: none;
               opacity: 0.8;
@@ -73,7 +73,7 @@
             </a>
           </li>
           <li style="margin-bottom: 0.8rem;">
-            <a href="market-overview.php" style="
+            <a href="market-overview.html" style="
               color: #ffffff;
               text-decoration: none;
               opacity: 0.8;
@@ -92,7 +92,7 @@
         <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">Legal</h4>
         <ul style="list-style: none; padding: 0; margin: 0;">
           <li style="margin-bottom: 0.8rem;">
-            <a href="disclaimer.php" style="
+            <a href="disclaimer.html" style="
               color: #ffffff;
               text-decoration: none;
               opacity: 0.8;
@@ -105,7 +105,7 @@
             </a>
           </li>
           <li style="margin-bottom: 0.8rem;">
-            <a href="terms.php" style="
+            <a href="terms.html" style="
               color: #ffffff;
               text-decoration: none;
               opacity: 0.8;
@@ -118,7 +118,7 @@
             </a>
           </li>
           <li style="margin-bottom: 0.8rem;">
-            <a href="privacy.php" style="
+            <a href="privacy.html" style="
               color: #ffffff;
               text-decoration: none;
               opacity: 0.8;
@@ -197,7 +197,7 @@
             <i class="fab fa-instagram"></i>
           </a>
         </div>
-        <a href="contact.php" style="
+        <a href="contact.html" style="
           display: inline-flex;
           align-items: center;
           color: #f0b90b;
