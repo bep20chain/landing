@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Learn cryptocurrency the easy way – beginner-friendly tutorials on Bitcoin, Ethereum, USDT, wallets, security, NFTs, and DeFi.">
+  <title>Crypto Education Hub | Learn Cryptocurrency Easily</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggler = document.getElementById('customToggler');
+      const icon = document.getElementById('toggler-icon');
+      const collapseEl = document.getElementById('cryptoNavbar');
+      let bsCollapse = new bootstrap.Collapse(collapseEl, { toggle: false });
+
+      toggler.addEventListener('click', function () {
+        if (collapseEl.classList.contains('show')) {
+          bsCollapse.hide();
+        } else {
+          bsCollapse.show();
+        }
+      });
+
+      collapseEl.addEventListener('shown.bs.collapse', () => {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      });
+
+      collapseEl.addEventListener('hidden.bs.collapse', () => {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+
+      // Close navbar if clicking outside
+      document.addEventListener('click', function (e) {
+        const isClickInsideNavbar = collapseEl.contains(e.target) || toggler.contains(e.target);
+        if (!isClickInsideNavbar && collapseEl.classList.contains('show')) {
+          bsCollapse.hide();
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header class="bg-dark text-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark container px-3 px-lg-0">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        <i class="fas fa-coins me-2" style="color: #f0b90b;"></i>CryptoEdu
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler border-0 py-2 px-3" type="button" id="customToggler">
+        <i class="fas fa-bars" id="toggler-icon"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-lg-end" id="cryptoNavbar">
+        <ul class="navbar-nav mt-3 mt-lg-0">
+          <!-- Example Nav Items -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="beginner-guide.html">Beginner Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="wallet-types.html">Wallets</a></li>
+          <li class="nav-item"><a class="nav-link" href="security-tips.html">Security</a></li>
+          <li class="nav-item"><a class="nav-link" href="market-overview.html">Markets</a></li>
+          <li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section
+    style="background: linear-gradient(to right, #0f172a, #1e293b); padding: 60px 20px; color: #fff; text-align: center;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <h1 style="font-size: 2.6rem; font-weight: bold; margin-bottom: 20px;">Your Complete Cryptocurrency Education Hub
+      </h1>
+      <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 30px;">
+        From understanding blockchain to managing your own wallet and securing your crypto — everything explained for
+        beginners.
+      </p>
+      <a href="beginner-guide.html"
+        style="background: #f8fafc; color: #1e293b; font-weight: bold; padding: 14px 28px; border-radius: 8px; text-decoration: none;">📘
+        Learn about Crypto</a>
+    </div>
+  </section>
+
+  <!-- SECTION: What is Cryptocurrency -->
+  <section style="padding: 50px 20px; background-color: #f8fafc; color: #0f172a;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 20px;">What Is Cryptocurrency?</h2>
+      <p style="font-size: 1rem; line-height: 1.8;">
+        Cryptocurrency is digital money designed to be secure, decentralized, and borderless. Unlike traditional
+        currencies issued by governments (called "fiat" currencies), cryptocurrencies are maintained by a decentralized
+        network of computers using blockchain technology.
+      </p>
+      <p style="margin-top: 15px;">
+        Bitcoin, created in 2009, was the first cryptocurrency and remains the most well-known. Since then, thousands of
+        other coins and tokens—like Ethereum, Solana, and USDT—have emerged with various use cases including smart
+        contracts, payments, NFTs, and decentralized finance (DeFi).
+      </p>
+      <p style="margin-top: 15px;">
+        The key innovation behind cryptocurrencies is the blockchain: a public, immutable ledger that ensures
+        transparency and security without the need for a central authority.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION: Why Learn It -->
+  <section style="padding: 50px 20px; background-color: #ffffff;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 20px;">Why Should You Learn About Crypto?</h2>
+      <ul style="padding-left: 20px; line-height: 1.8;">
+        <li><strong>Control Over Your Money:</strong> Be your own bank — send, receive, and store value independently.
+        </li>
+        <li><strong>Global Access:</strong> Crypto works anywhere the internet exists. It doesn't care where you're from
+          or who you are.</li>
+        <li><strong>Investing Opportunities:</strong> Bitcoin and other crypto assets have outperformed most traditional
+          assets over the last decade.</li>
+        <li><strong>Innovation Participation:</strong> NFTs, DeFi, DAOs, GameFi — the future of technology is being
+          built on crypto rails.</li>
+        <li><strong>Job Market Demand:</strong> Web3 developers, marketers, and analysts are in high demand across the
+          globe.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION: Core Concepts -->
+  <section style="padding: 50px 20px; background-color: #f1f5f9;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 30px;">Core Concepts Explained</h2>
+
+      <h3 style="font-size: 1.4rem; font-weight: bold;">🔗 Blockchain Technology</h3>
+      <p style="margin-bottom: 20px;">
+        A blockchain is a distributed database shared among nodes in a network. It ensures that transactions are
+        transparent, secure, and irreversible. Each block contains data, a timestamp, and a cryptographic hash of the
+        previous block, forming a secure chain. No central server means no single point of failure.
+      </p>
+
+      <h3 style="font-size: 1.4rem; font-weight: bold;">💱 Buying & Selling Crypto</h3>
+      <p style="margin-bottom: 20px;">
+        You can buy crypto on exchanges like Coinbase, Binance, or Kraken. Always enable 2FA and avoid sharing private
+        keys. Selling involves converting back to fiat or stablecoins like USDT, often with small fees. Peer-to-peer
+        (P2P) trading is another option, but it carries higher risk if not done through reputable platforms.
+      </p>
+
+      <h3 style="font-size: 1.4rem; font-weight: bold;">🔐 Wallets & Security</h3>
+      <p style="margin-bottom: 20px;">
+        Crypto wallets store your private keys — the credentials you need to access and manage your funds. Hot wallets
+        (online) are convenient, but cold wallets (offline hardware) offer the best security. Never share your seed
+        phrase. Backup everything securely and never email it to yourself.
+      </p>
+
+      <h3 style="font-size: 1.4rem; font-weight: bold;">🧠 Avoiding Scams</h3>
+      <p style="margin-bottom: 20px;">
+        Scams are rampant in crypto. Common red flags include promises of guaranteed returns, impersonation of
+        influencers, and urgent withdrawal requests. Use only trusted wallets and exchanges. Bookmark official sites and
+        always verify links.
+      </p>
+
+      <h3 style="font-size: 1.4rem; font-weight: bold;">🚀 DeFi & NFTs</h3>
+      <p style="margin-bottom: 20px;">
+        Decentralized Finance (DeFi) allows users to lend, borrow, and earn yield without banks. NFTs represent unique
+        ownership of digital assets, from art to music to game items. Both are growing industries built entirely on
+        blockchain technology.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 50px 20px; background-color: #ffffff; text-align: center;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 15px;">Start Your Crypto Journey Today</h2>
+      <p style="font-size: 1rem; margin-bottom: 25px;">Join thousands of others learning how to safely and confidently
+        explore the crypto world.</p>
+      <a href="beginner-guide.html"
+        style="background-color: #2563eb; color: white; padding: 14px 30px; font-size: 1rem; font-weight: bold; border-radius: 6px; text-decoration: none;">🚀
+        Go to Beginner’s Guide</a>
+      <br><br>
+      <a href="faq.html" style="color: #1e293b; font-weight: 500; text-decoration: underline;">Read Our FAQ</a>
+    </div>
+  </section>
+
+  <footer style="
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: #ffffff;
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
+">
+    <!-- Decorative elements -->
+    <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=1000&auto=format&fit=crop') center/cover;
+    opacity: 0.05;
+    z-index: 0;
+  "></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+      <!-- Footer columns -->
+      <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+      text-align: left;
+    ">
+        <div>
+          <h3 style="
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1.5rem;
+          color: #f0b90b;
+          display: flex;
+          align-items: center;
+        ">
+            <i class="fas fa-coins me-2"></i>CryptoEdu
+          </h3>
+          <p style="opacity: 0.8; line-height: 1.6;">
+            Your trusted guide to blockchain technology and cryptocurrency education since
+            2023.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 0.8rem;">
+              <a href="beginner-guide.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Beginner's Guide
+              </a>
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+              <a href="wallet-types.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Wallet Types
+              </a>
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+              <a href="market-overview.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Market Overview
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">Legal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 0.8rem;">
+              <a href="disclaimer.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Disclaimer
+              </a>
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+              <a href="terms.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Terms & Conditions
+              </a>
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+              <a href="privacy.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">Connect With Us</h4>
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <a href="#" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.background='#1da1f2'; this.style.transform='translateY(-3px)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.background='#3b5998'; this.style.transform='translateY(-3px)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.background='#0077b5'; this.style.transform='translateY(-3px)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.background='#e1306c'; this.style.transform='translateY(-3px)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <a href="contact.html" style="
+          display: inline-flex;
+          align-items: center;
+          color: #f0b90b;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        " onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#f0b90b'">
+            <i class="fas fa-envelope me-2"></i> Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright section -->
+      <div style="
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    ">
+        <p style="opacity: 0.7; margin-bottom: 1rem;">
+          &copy;
+          2025 CryptoEdu. All rights reserved.
+        </p>
+        <p style="opacity: 0.6; font-size: 0.9rem; line-height: 1.6;">
+          <strong>Disclaimer:</strong> This website provides educational content about cryptocurrency and
+          blockchain technology only.
+          It does not constitute financial advice, nor does it recommend any specific investments.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

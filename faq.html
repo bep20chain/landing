@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Learn cryptocurrency the easy way – beginner-friendly tutorials on Bitcoin, Ethereum, USDT, wallets, security, NFTs, and DeFi.">
+  <title>Crypto Education Hub | Learn Cryptocurrency Easily</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggler = document.getElementById('customToggler');
+      const icon = document.getElementById('toggler-icon');
+      const collapseEl = document.getElementById('cryptoNavbar');
+      let bsCollapse = new bootstrap.Collapse(collapseEl, { toggle: false });
+
+      toggler.addEventListener('click', function () {
+        if (collapseEl.classList.contains('show')) {
+          bsCollapse.hide();
+        } else {
+          bsCollapse.show();
+        }
+      });
+
+      collapseEl.addEventListener('shown.bs.collapse', () => {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      });
+
+      collapseEl.addEventListener('hidden.bs.collapse', () => {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+
+      // Close navbar if clicking outside
+      document.addEventListener('click', function (e) {
+        const isClickInsideNavbar = collapseEl.contains(e.target) || toggler.contains(e.target);
+        if (!isClickInsideNavbar && collapseEl.classList.contains('show')) {
+          bsCollapse.hide();
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header class="bg-dark text-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark container px-3 px-lg-0">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        <i class="fas fa-coins me-2" style="color: #f0b90b;"></i>CryptoEdu
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler border-0 py-2 px-3" type="button" id="customToggler">
+        <i class="fas fa-bars" id="toggler-icon"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-lg-end" id="cryptoNavbar">
+        <ul class="navbar-nav mt-3 mt-lg-0">
+          <!-- Example Nav Items -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="beginner-guide.html">Beginner Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="wallet-types.html">Wallets</a></li>
+          <li class="nav-item"><a class="nav-link" href="security-tips.html">Security</a></li>
+          <li class="nav-item"><a class="nav-link" href="market-overview.html">Markets</a></li>
+          <li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section
+    style="background: linear-gradient(to right, #0f172a, #1e293b); padding: 60px 20px; color: #ffffff; text-align: center;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <h1 style="font-size: 2.4rem; font-weight: bold;">Frequently Asked Questions</h1>
+    </div>
+  </section>
+
+  <section style="padding: 50px 20px; background-color: #f8fafc; color: #0f172a;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <h2 style="font-size: 1.5rem;">Is this financial advice?</h2>
+      <p style="line-height: 1.8;">No. This site is strictly for educational purposes. We do not offer investment or
+        legal
+        advice.</p>
+
+      <h2 style="font-size: 1.5rem;">Do you collect personal data?</h2>
+      <p style="line-height: 1.8;">No. We do not collect, store, or share any user data. No accounts or cookies are
+        used.
+      </p>
+
+      <h2 style="font-size: 1.5rem;">How can I buy cryptocurrency?</h2>
+      <p style="line-height: 1.8;">You can use regulated exchanges like Coinbase, Kraken, or Binance. See our guides for
+        more info.</p>
+
+      <h2 style="font-size: 1.5rem;">Which wallet should I use?</h2>
+      <p style="line-height: 1.8;">It depends on your needs. See our <a href="wallet-types.html"
+          style="color: #2563eb;">Wallet Types</a> guide.</p>
+    </div>
+  </section>
+
+  <footer style="
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: #ffffff;
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
+">
+    <!-- Decorative elements -->
+    <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=1000&auto=format&fit=crop') center/cover;
+    opacity: 0.05;
+    z-index: 0;
+  "></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+      <!-- Footer columns -->
+      <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+      text-align: left;
+    ">
+        <div>
+          <h3 style="
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1.5rem;
+          color: #f0b90b;
+          display: flex;
+          align-items: center;
+        ">
+            <i class="fas fa-coins me-2"></i>CryptoEdu
+          </h3>
+          <p style="opacity: 0.8; line-height: 1.6;">
+            Your trusted guide to blockchain technology and cryptocurrency education since
+            2023.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 0.8rem;">
+              <a href="beginner-guide.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Beginner's Guide
+              </a>
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+              <a href="wallet-types.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Wallet Types
+              </a>
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+              <a href="market-overview.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Market Overview
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">Legal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 0.8rem;">
+              <a href="disclaimer.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Disclaimer
+              </a>
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+              <a href="terms.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Terms & Conditions
+              </a>
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+              <a href="privacy.html" style="
+              color: #ffffff;
+              text-decoration: none;
+              opacity: 0.8;
+              transition: all 0.3s ease;
+              display: flex;
+              align-items: center;
+            " onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'"
+                onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+                <i class="fas fa-chevron-right me-2" style="font-size: 0.8rem;"></i> Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">Connect With Us</h4>
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <a href="#" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.background='#1da1f2'; this.style.transform='translateY(-3px)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.background='#3b5998'; this.style.transform='translateY(-3px)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.background='#0077b5'; this.style.transform='translateY(-3px)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.background='#e1306c'; this.style.transform='translateY(-3px)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <a href="contact.html" style="
+          display: inline-flex;
+          align-items: center;
+          color: #f0b90b;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        " onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#f0b90b'">
+            <i class="fas fa-envelope me-2"></i> Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright section -->
+      <div style="
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    ">
+        <p style="opacity: 0.7; margin-bottom: 1rem;">
+          &copy;
+          2025 CryptoEdu. All rights reserved.
+        </p>
+        <p style="opacity: 0.6; font-size: 0.9rem; line-height: 1.6;">
+          <strong>Disclaimer:</strong> This website provides educational content about cryptocurrency and
+          blockchain technology only.
+          It does not constitute financial advice, nor does it recommend any specific investments.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
