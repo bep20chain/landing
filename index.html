@@ -73,16 +73,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       return false;
     }
   </script>
-  @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  }
+  <style>
+    @keyframes pulse {
 
-  .pulse {
-  display: inline-block;
-  animation: pulse 1.4s infinite;
-  transform-origin: center;
-  }
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .pulse {
+      display: inline-block;
+      animation: pulse 1.4s infinite;
+      transform-origin: center;
+    }
+  </style>
+
+
 
 
 </head>
