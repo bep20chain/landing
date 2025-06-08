@@ -55,6 +55,25 @@
 
     gtag('config', 'AW-17172172935');
   </script>
+  <!-- Event snippet for Page view conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17172172935/svLJCNSv8tUaEIehqvw_',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
 </head>
 
 <body>
@@ -95,9 +114,11 @@
         From understanding blockchain to managing your own wallet and securing your crypto — everything explained for
         beginners.
       </p>
-      <a href="beginner-guide.html"
-        style="background: #f8fafc; color: #1e293b; font-weight: bold; padding: 14px 28px; border-radius: 8px; text-decoration: none;">📘
-        Learn about Crypto</a>
+      <a href="beginner-guide.html" onclick="return gtag_report_conversion('beginner-guide.html')"
+        style="background: #f8fafc; color: #1e293b; font-weight: bold; padding: 14px 28px; border-radius: 8px; text-decoration: none;">
+        📘 Learn about Crypto
+      </a>
+
     </div>
   </section>
 
